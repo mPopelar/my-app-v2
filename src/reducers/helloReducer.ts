@@ -1,9 +1,9 @@
 import { AnyAction } from 'redux';
 // import { EnthusiasmAction } from 'src/actions/indexActions';
 import { DECREMENT_ENTHUSIASM, INCREMENT_ENTHUSIASM } from '../constants/index';
-import { IStoreState } from '../types/index';
+import { initStore, IStoreState } from '../types/index';
 
-export function helloReducer(state: IStoreState, action: AnyAction): IStoreState {
+export function helloReducer(state: IStoreState = initStore, action: AnyAction): IStoreState {
   switch (action.type) {
     case INCREMENT_ENTHUSIASM:
       return { ...state, enthusiasmLevel: state.enthusiasmLevel + 1 };

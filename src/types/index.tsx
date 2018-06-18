@@ -3,3 +3,9 @@ export interface IStoreState {
     enthusiasmLevel: number;
     stringToDisplay: string;
 }
+
+export const initStore: IStoreState = {
+    enthusiasmLevel: 0,
+    languageName: "",
+    stringToDisplay: ""
+}
